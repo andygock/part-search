@@ -1,7 +1,5 @@
-// focus on input on page load
 document.getElementById("searchInput").focus();
 
-// listen for enter key
 document
   .getElementById("searchInput")
   .addEventListener("keydown", function (event) {
@@ -11,17 +9,17 @@ document
   });
 
 function searchMultipleEngines(query) {
+  const checkboxes = document.querySelectorAll(".search-checkbox:checked");
   const encodedTerm = encodeURIComponent(query);
-  const urls = [
-    `https://au.element14.com/search?st=${encodedTerm}&gs=true`,
-    `https://au.rs-online.com/web/c/?searchTerm=${encodedTerm}`,
-    `https://www.digikey.com.au/en/products/result?keywords=${encodedTerm}`,
-    `https://au.mouser.com/c/?q=${encodedTerm}`,
-  ];
+  const searchEngines = {
+    element14: `https://au.element14.com/search?st=${encodedTerm}&gs=true`,
+    rs: `https://au.rs-online.com/web/c/?searchTerm=${encodedTerm}`,
+    digikey: `https://www.digikey.com.au/en/products/result?keywords=${encodedTerm}`,
+    mouser: `https://au.mouser.com/c/?q=${encodedTerm}`,
+  };
 
-  urls.forEach((url) => {
-    // const searchUrl = url + encodeURIComponent(query);
-    const searchUrl = url;
+  checkboxes.forEach((checkbox) => {
+    const searchUrl = searchEngines[checkbox.value];
     const win = window.open(searchUrl, "_blank");
     if (win) {
       win.focus();
@@ -30,3 +28,8 @@ function searchMultipleEngines(query) {
     }
   });
 }
+
+document.getElementById("searchButton").addEventListener("click", function () {
+  const searchInput = document.getElementById("searchInput");
+  searchMultipleEngines(searchInput.value);
+});

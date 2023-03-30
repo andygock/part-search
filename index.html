@@ -12,12 +12,50 @@
         <h1>Part Search</h1>
       </div>
       <input type="text" id="searchInput" placeholder="Search..." />
+      <button id="searchButton">Search</button>
+      <div class="checkbox-container">
+        <label
+          ><input
+            type="checkbox"
+            class="search-checkbox"
+            value="element14"
+            checked
+          />
+          Element14</label
+        >
+        <label
+          ><input type="checkbox" class="search-checkbox" value="rs" checked />
+          RS Components</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="search-checkbox"
+            value="digikey"
+            checked
+          />
+          Digi-Key</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="search-checkbox"
+            value="mouser"
+            checked
+          />
+          Mouser</label
+        >
+      </div>
       <p>
-        Searches Element 14, RS Components, Digi-Key and Mouser. Popups must be
-        enabled for this site to allow opening of multiple tabs of search
-        results.
+        Searches multiple electronic part suppliers. Popups must be enabled for
+        this site to allow opening of multiple tabs of search results.
       </p>
     </div>
+    <footer>
+      <a href="https://github.com/andygock/part-search" class="github-link"
+        >GitHub</a
+      >
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -27,18 +27,74 @@ body {
   margin: 0;
 }
 
-input[type='text'] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   font-size: 18px;
   border: 1px solid #ccc;
-  border-radius: 24px;
+  border-radius: 12px;
   outline: none;
 }
 
-input[type='text']:focus {
+input[type="text"]:focus {
   border-color: #4d90fe;
   box-shadow: 0 0 8px rgba(77, 144, 254, 0.5);
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  margin-top: 12px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  border: 1px solid #dadce0;
+  color: #3c4043;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+button:hover {
+  background-color: #f1f3f4;
+  border-color: #d2e3fc;
+}
+
+button:active {
+  background-color: #e8eaed;
+  border-color: #d2e3fc;
+}
+
+footer {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.github-link {
+  color: #3c4043;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.github-link:hover {
+  text-decoration: underline;
 }
