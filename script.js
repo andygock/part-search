@@ -16,6 +16,7 @@ function searchMultipleEngines(query) {
     rs: `https://au.rs-online.com/web/c/?searchTerm=${encodedTerm}`,
     digikey: `https://www.digikey.com.au/en/products/result?keywords=${encodedTerm}`,
     mouser: `https://au.mouser.com/c/?q=${encodedTerm}`,
+    octopart: `https://octopart.com/search?q=${encodedTerm}&currency=AUD&specs=0`,
   };
 
   checkboxes.forEach((checkbox) => {
