@@ -1,30 +1,42 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   color: #333;
+  margin-top: 12px;
 }
 
-.search-container {
-  width: 50%;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+  flex-wrap: wrap;
 }
 
-.logo-container {
-  margin-bottom: 20px;
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    justify-content: left;
+  }
 }
 
-.logo-container h1 {
+.intro {
+  margin-bottom: 12px;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
   font-size: 48px;
   color: #4285f4;
   margin: 0;
+  text-align: center;
 }
 
 input[type="text"] {
@@ -43,12 +55,22 @@ input[type="text"]:focus {
   box-shadow: 0 0 8px rgba(77, 144, 254, 0.5);
 }
 
-.checkbox-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* width: 100%; */
-  margin-top: 12px;
+#checkbox-container {
+  margin-left: 12px;
+  user-select: none; /* prevent accidental text selection when user clicks */
+  text-align: left;
+}
+
+#select,
+#deselect {
+  font-size: 80%;
+  color: #4285f4;
+  cursor: pointer;
+}
+
+#select:hover,
+#deselect:hover {
+  text-decoration: underline;
 }
 
 label {

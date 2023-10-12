@@ -8,53 +8,25 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   </head>
   <body>
-    <div class="search-container">
-      <div class="logo-container">
+    <div class="container">
+      <div class="intro">
         <h1>Part Search</h1>
+        <p>
+          Searches multiple electronic part suppliers. Popups must be enabled
+          for this site to allow opening of multiple tabs of search results.
+        </p>
+        <div class="center">
+          <input type="text" id="searchInput" placeholder="Search..." />
+          <button id="searchButton">Search</button>
+        </div>
       </div>
-      <input type="text" id="searchInput" placeholder="Search..." />
-      <button id="searchButton">Search</button>
-      <div class="checkbox-container">
-        <label
-          ><input
-            type="checkbox"
-            class="search-checkbox"
-            value="element14"
-            checked
-          />
-          Element14</label
-        >
-        <label
-          ><input type="checkbox" class="search-checkbox" value="rs" checked />
-          RS Components</label
-        >
-        <label
-          ><input
-            type="checkbox"
-            class="search-checkbox"
-            value="digikey"
-            checked
-          />
-          Digi-Key</label
-        >
-        <label
-          ><input
-            type="checkbox"
-            class="search-checkbox"
-            value="mouser"
-            checked
-          />
-          Mouser</label
-        >
-        <label
-          ><input type="checkbox" class="search-checkbox" value="octopart" />
-          Octopart</label
-        >
+      <div id="checkbox-container">
+        <div id="checkboxes"></div>
+        <div>
+          <span id="select">select all</span> /
+          <span id="deselect">deselect all</span>
+        </div>
       </div>
-      <p>
-        Searches multiple electronic part suppliers. Popups must be enabled for
-        this site to allow opening of multiple tabs of search results.
-      </p>
     </div>
     <footer>
       <a href="https://github.com/andygock/part-search" class="github-link"
