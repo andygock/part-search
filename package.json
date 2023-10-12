@@ -10,6 +10,6 @@
     "surge": "vite build && surge ./dist poogle.surge.sh"
   },
   "devDependencies": {
-    "vite": "^4.2.1"
+    "vite": "^4.4.11"
   }
 }
