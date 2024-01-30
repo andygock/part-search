@@ -4,4 +4,5 @@ Searches Element 14, RS Components, Digi-Key and Mouser. Popups must be enabled 
 
 ## Demo
 
-<https://poogle.surge.sh>
+<https://andygock.github.io/part-search/>
+
