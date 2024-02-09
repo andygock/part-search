@@ -54,6 +54,11 @@ document.getElementById("deselect").addEventListener("click", function () {
 });
 
 function searchMultipleEngines(query) {
+  // check trimmed query is not blank
+  if (!query.trim()) {
+    return;
+  }
+
   const checkboxes = document.querySelectorAll(".search-checkbox:checked");
   const encodedTerm = encodeURIComponent(query);
   const searchEngines = {

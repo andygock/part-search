@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #eee;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,17 +12,23 @@ body {
   margin-top: 12px;
 }
 
-.container {
+.outer {
   display: flex;
   justify-content: center;
-  margin-top: 36px;
-  flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1200px) {
+.container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+@media screen and (max-width: 900px) {
+  /* small screens */
   .container {
     flex-direction: column;
-    justify-content: left;
+    justify-content: flex-start;
   }
 }
 
@@ -46,7 +54,7 @@ input[type="text"] {
   box-sizing: border-box;
   font-size: 18px;
   border: 1px solid #ccc;
-  border-radius: 12px;
+  border-radius: 3px;
   outline: none;
 }
 
@@ -85,24 +93,23 @@ input[type="checkbox"] {
 
 button {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  border: 1px solid #dadce0;
-  color: #3c4043;
+  background-color: #fff;
+  border: 1px solid #ccc;
   padding: 10px 20px;
   font-size: 18px;
-  border-radius: 12px;
+  border-radius: 3%;
   cursor: pointer;
   margin-top: 16px;
 }
 
 button:hover {
-  background-color: #f1f3f4;
-  border-color: #d2e3fc;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
 button:active {
-  background-color: #e8eaed;
-  border-color: #d2e3fc;
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
 footer {
