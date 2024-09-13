@@ -4,4 +4,4 @@ Searches Element 14, RS Components, Digi-Key and Mouser. Popups must be enabled 
 
 ## Demo
 
-[Site hosted on GitHub Pages](<https://parts.gock.net/)
+[Site hosted on GitHub Pages](https://parts.gock.net/)
