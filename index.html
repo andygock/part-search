@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Search multiple Australian electronic component and retail suppliers at once."
+    >
+    <meta name="referrer" content="no-referrer">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
+    >
     <title>Part Search</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
   <body>
-    <div class="outer">
+    <main class="outer">
       <div class="container">
-        <div class="intro">
-          <h1>Part Search</h1>
+        <section class="intro" aria-labelledby="page-title">
+          <h1 id="page-title">Part Search</h1>
           <p>
             Searches multiple electronic part suppliers. Popups must be enabled
             for this site to allow opening of multiple tabs of search results.
           </p>
-          <div class="center">
-            <input type="text" id="searchInput" placeholder="Search..." />
-            <button id="searchButton">Search</button>
+          <form id="searchForm">
+            <label for="searchInput">Part number or keywords</label>
+            <div class="search-controls">
+              <input
+                type="search"
+                id="searchInput"
+                name="query"
+                autocomplete="off"
+                required
+              >
+              <button type="submit">Search</button>
+            </div>
+          </form>
+          <p id="searchStatus" class="status" role="status" aria-live="polite"></p>
+        </section>
+        <fieldset class="supplier-picker">
+          <legend>Suppliers</legend>
+          <div id="checkboxes" class="checkboxes"></div>
+          <div class="bulk-actions">
+            <button type="button" class="text-button" id="select">Select all</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" class="text-button" id="deselect">
+              Deselect all
+            </button>
           </div>
-        </div>
-        <div id="checkbox-container">
-          <div id="checkboxes"></div>
-          <div>
-            <span id="select">select all</span> /
-            <span id="deselect">deselect all</span>
-          </div>
-        </div>
+        </fieldset>
       </div>
-    </div>
+    </main>
     <footer>
       <a href="https://github.com/andygock/part-search" class="github-link"
         >GitHub</a
