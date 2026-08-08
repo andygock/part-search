@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta
       name="description"
-      content="Search multiple Australian electronic component and retail suppliers at once."
+      content="Search Australian electronic component suppliers including Element14, RS, Digi-Key and Mouser with one query. Compare parts across multiple stores."
     >
+    <meta name="robots" content="index, follow">
     <meta name="referrer" content="no-referrer">
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
     >
-    <title>Part Search</title>
+    <title>Australian Electronic Parts Search | Part Search</title>
+    <link rel="canonical" href="https://parts.gock.net/">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
   </head>
@@ -20,10 +22,11 @@
     <main class="outer">
       <div class="container">
         <section class="intro" aria-labelledby="page-title">
-          <h1 id="page-title">Part Search</h1>
+          <h1 id="page-title">Australian Electronic Parts Search</h1>
           <p>
-            Searches multiple electronic part suppliers. Popups must be enabled
-            for this site to allow opening of multiple tabs of search results.
+            Search multiple Australian electronic component and retail suppliers
+            with one query. Allow popups to open each supplier's results in a
+            separate tab.
           </p>
           <form id="searchForm">
             <label for="searchInput">Part number or keywords</label>
@@ -39,6 +42,15 @@
             </div>
           </form>
           <p id="searchStatus" class="status" role="status" aria-live="polite"></p>
+          <section class="about" aria-labelledby="supported-suppliers">
+            <h2 id="supported-suppliers">Compare parts across suppliers</h2>
+            <p>
+              Search Element14, RS Components, Digi-Key, Mouser, Octopart,
+              Amazon Australia, eBay Australia, Officeworks, Bunnings and Kmart.
+              Choose the stores you want, then search by part number or product
+              keywords.
+            </p>
+          </section>
         </section>
         <fieldset class="supplier-picker">
           <legend>Suppliers</legend>
