@@ -130,7 +130,13 @@ button {
   font-weight: 700;
 }
 
-button:is(:hover, :active) {
+button:disabled,
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+button:not(:disabled):is(:hover, :active) {
   border-color: var(--color-primary);
   background: var(--color-hover);
 }
@@ -140,6 +146,37 @@ button:is(:hover, :active) {
   margin-block: var(--space-3) 0;
   color: var(--color-muted);
   font-size: 0.925rem;
+}
+
+.error-message {
+  padding: var(--space-3);
+  border: 1px solid #c5221f;
+  border-radius: var(--radius-small);
+  color: #8c1d18;
+}
+
+.search-results {
+  margin-block-start: var(--space-4);
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-background);
+}
+
+.search-results p {
+  margin-block-end: var(--space-2);
+  color: var(--color-muted);
+}
+
+.search-results ul {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding-inline-start: var(--space-5);
+}
+
+.search-results a {
+  color: var(--color-primary);
 }
 
 .about {
@@ -198,7 +235,7 @@ input[type="checkbox"] {
   font-weight: 400;
 }
 
-.text-button:is(:hover, :active) {
+.text-button:not(:disabled):is(:hover, :active) {
   border-color: transparent;
   background: transparent;
   color: var(--color-primary-hover);

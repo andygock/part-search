@@ -11,7 +11,7 @@
     <meta name="referrer" content="no-referrer">
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
+      content="default-src 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self'; style-src-attr 'none'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; upgrade-insecure-requests"
     >
     <title>Australian Electronic Parts Search | Part Search</title>
     <link rel="canonical" href="https://parts.gock.net/">
@@ -36,12 +36,29 @@
                 id="searchInput"
                 name="query"
                 autocomplete="off"
+                disabled
                 required
               >
-              <button type="submit">Search</button>
+              <button type="submit" id="searchButton" disabled>Search</button>
             </div>
           </form>
-          <p id="searchStatus" class="status" role="status" aria-live="polite"></p>
+          <p id="searchStatus" class="status" role="status" aria-live="polite">
+            Loading supplier search&hellip;
+          </p>
+          <noscript>
+            <p class="error-message">
+              JavaScript is required to create the supplier searches. Enable it,
+              then reload this page.
+            </p>
+          </noscript>
+          <section id="searchResults" class="search-results" aria-labelledby="search-results-title" hidden>
+            <h2 id="search-results-title">Supplier search links</h2>
+            <p>
+              Use these links if your browser blocks any tabs. Each link opens in
+              a new tab.
+            </p>
+            <ul id="searchResultLinks"></ul>
+          </section>
           <section class="about" aria-labelledby="supported-suppliers">
             <h2 id="supported-suppliers">Compare parts across suppliers</h2>
             <p>
